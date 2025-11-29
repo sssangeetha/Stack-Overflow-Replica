@@ -162,118 +162,219 @@ qa-platform/
 ├── README.md                               # Project documentation
 │
 ├── backend/                                # Backend API
+
 │   ├── src/
+
 │   │   ├── server.ts                      # Main server file
+
 │   │   ├── controllers/
+
 │   │   │   ├── question.controller.ts     # Question endpoints
+
 │   │   │   ├── answer.controller.ts       # Answer endpoints
+
 │   │   │   └── user.controller.ts         # User endpoints
+
 │   │   ├── services/
+
 │   │   │   ├── auth.service.ts            # Authentication logic
+
 │   │   │   ├── cache.service.ts           # Redis caching
+
 │   │   │   ├── search.service.ts          # Elasticsearch
+
 │   │   │   └── kafka.service.ts           # Kafka producer
+
 │   │   ├── routes/
+
 │   │   │   ├── auth.routes.ts             # Auth routes
+
 │   │   │   ├── question.routes.ts         # Question routes
+
 │   │   │   └── answer.routes.ts           # Answer routes
+
 │   │   ├── middleware/
+
 │   │   │   ├── auth.middleware.ts         # JWT verification
+
 │   │   │   ├── validation.middleware.ts   # Request validation
+
 │   │   │   └── errorHandler.ts            # Error handling
+
 │   │   ├── config/
+
 │   │   │   ├── database.ts                # PostgreSQL config
+
 │   │   │   ├── redis.ts                   # Redis config
+
 │   │   │   └── kafka.ts                   # Kafka config
+
 │   │   └── types/
+
 │   │       └── index.ts                   # TypeScript types
+
 │   ├── tests/
+
 │   │   ├── unit/
+
 │   │   │   └── auth.service.test.ts       # Unit tests
+
 │   │   ├── integration/
+
 │   │   │   └── question.test.ts           # Integration tests
+
 │   │   └── setup.ts                       # Test setup
+
 │   ├── package.json
+
 │   ├── tsconfig.json
+
 │   └── jest.config.js
+
 │
 ├── frontend/                               # React/Next.js frontend
+
 │   ├── src/
+
 │   │   ├── components/
+
 │   │   │   ├── Questions/
+
 │   │   │   │   ├── QuestionList.tsx       # Question list page
+
 │   │   │   │   ├── QuestionCard.tsx       # Question card
+
 │   │   │   │   ├── QuestionDetail.tsx     # Question details
+
 │   │   │   │   └── AskQuestionForm.tsx    # Create question
+
 │   │   │   ├── Auth/
+
 │   │   │   │   ├── LoginForm.tsx          # Login page
+
 │   │   │   │   └── RegisterForm.tsx       # Registration
+
 │   │   │   └── common/
+
 │   │   │       ├── Header.tsx             # App header
+
 │   │   │       ├── Pagination.tsx         # Pagination
+
 │   │   │       └── MarkdownEditor.tsx     # Markdown editor
+
 │   │   ├── pages/
+
 │   │   │   ├── index.tsx                  # Home page
+
 │   │   │   ├── questions/
+
 │   │   │   │   ├── [id].tsx               # Question detail
+
 │   │   │   │   └── ask.tsx                # Ask question
+
 │   │   │   └── auth/
+
 │   │   │       ├── login.tsx              # Login page
+
 │   │   │       └── register.tsx           # Register page
+
 │   │   ├── hooks/
+
 │   │   │   ├── useAuth.ts                 # Auth hook
+
 │   │   │   └── useWebSocket.ts            # WebSocket hook
+
 │   │   ├── services/
+
 │   │   │   └── api.ts                     # API client
+
 │   │   ├── store/
+
 │   │   │   └── index.ts                   # Redux store
+
 │   │   └── types/
+
 │   │       └── index.ts                   # TypeScript types
+
 │   ├── package.json
+
 │   ├── tsconfig.json
+
 │   └── next.config.js
+
 │
 ├── notification-service/                   # Kafka consumer
+
 │   ├── src/
+
 │   │   ├── index.ts                       # Main entry
+
 │   │   ├── consumers/
+
 │   │   │   └── notification.consumer.ts   # Kafka consumer
+
 │   │   ├── services/
+
 │   │   │   ├── email.service.ts           # Email sender
+
 │   │   │   └── websocket.service.ts       # WebSocket sender
+
 │   │   └── config/
+
 │   │       └── database.ts                # DB config
+
 │   └── package.json
+
 │
 ├── database/
+
 │   ├── schema.sql                         # Database schema
+
 │   ├── migrations/                        # SQL migrations
+
 │   └── seeds/                             # Sample data
 │
 ├── infrastructure/
+
 │   ├── kubernetes/                        # K8s manifests
+
 │   │   ├── namespace.yaml
+
 │   │   ├── configmap.yaml
+
 │   │   ├── secrets.yaml
+
 │   │   ├── postgres-deployment.yaml
+
 │   │   ├── backend-deployment.yaml
+
 │   │   ├── frontend-deployment.yaml
+
 │   │   ├── ingress.yaml
+
 │   │   └── deploy.sh                      # Deployment script
 │   ├── monitoring/
+
 │   │   ├── prometheus.yml
+
 │   │   └── grafana-dashboards/
 │   └── nginx/
+
 │       └── nginx.conf
 │
 ├── docs/
 │   ├── API.md                             # API documentation
+
 │   ├── ARCHITECTURE.md                    # Architecture guide
+
 │   └── DEPLOYMENT.md                      # Deployment guide
 │
 └── scripts/
+
     ├── setup.sh                           # Initial setup
+    
     ├── seed-data.sh                       # Seed database
+    
     └── deploy.sh                          # Deployment
 
 🔧 Additional Files to Create
