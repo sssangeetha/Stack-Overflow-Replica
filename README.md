@@ -149,11 +149,16 @@ API Health: http://localhost:5000/health
 
 
 📁 Complete File Structure
+
 qa-platform/
 ├── .env                                    # Environment variables
+
 ├── .gitignore                              # Git ignore rules
+
 ├── docker-compose.yml                      # Docker services
+
 ├── package.json                            # Root package.json
+
 ├── README.md                               # Project documentation
 │
 ├── backend/                                # Backend API
