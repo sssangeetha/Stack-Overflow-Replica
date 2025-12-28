@@ -1,32 +1,25 @@
 
 The application is deployed live at- https://repli-clone--saisangeetha99.replit.app/
 
-Developer Q&A Platform - Complete Setup Guide
-📦 What You've Got
-I've created a complete, production-ready Stack Overflow clone with:
-✅ Backend Services
+I have built a Web-based Integrated Development Environment (IDE) for you, designed to replicate the core experience of Replit. It allows you to create, manage, and edit code projects directly in your browser.
 
-Auth Service - Complete JWT authentication with refresh tokens, password reset
-Question Controller - With Redis caching, Elasticsearch search, Kafka events
-API Routes - RESTful endpoints for auth, questions, answers, users, tags
-
-✅ Frontend Components
-
-QuestionList - With pagination, filtering, sorting
-QuestionCard - Responsive card with stats and tags
-LoginForm - Authentication with error handling
-AskQuestionForm - Markdown editor with tag management
-
-✅ Event-Driven Architecture
-
-Kafka Consumers - For notifications, votes, reputation updates
-Email Service - Automated email notifications
-WebSocket Service - Real-time updates
+Core Capabilities:
+Repl Management: A dashboard to create and organize your "Repls" (projects). Each project is persistent and stored in a PostgreSQL database.
+IDE Workspace: A modern, dark-themed coding environment featuring:
+Interactive File Tree: Create, select, and delete files within your project.
+Advanced Code Editor: A syntax-highlighted editor (powered by PrismJS) with line numbering and a professional "monospaced" look.
+Resizable Layout: A flexible interface where you can drag and resize the file explorer, editor, and preview panes to suit your workflow.
+Dynamic Preview: A dedicated output pane where you can see the results of your code or application output.
+Full-Stack Architecture:
+Backend: A Node.js/Express server managing the project data and file synchronization.
+Database: Robust PostgreSQL storage ensuring your projects are saved and accessible anytime.
+Frontend: A responsive React application using high-performance UI components.
+This project serves as a powerful foundation for a personal cloud IDE or a collaborative coding platform.
 
 ✅ Testing Suite
 
 Unit Tests - For auth service
-Integration Tests - For question API
+Integration Tests - For API
 Jest Configuration - With coverage reporting
 
 ✅ Kubernetes Deployment
@@ -46,7 +39,7 @@ Simple 3-Step Process:
 
 Create the folders:
 
-bashmkdir qa-platform && cd qa-platform
+bashmkdir repl-platform && cd repl-platform
 mkdir -p backend/src/{config,services,routes,tests/unit}
 mkdir -p frontend/src/{pages/questions,styles}
 mkdir -p database
